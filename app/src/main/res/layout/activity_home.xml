@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:background="@color/background_home_activity">
+    <ImageView
+        android:id="@+id/dropdown_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/profile_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="25dp"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/avater"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CircleImageView"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="25dp"/>
+    <TextView
+        android:id="@+id/chosee_the"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Choose the"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/dropdown_menu"
+        app:layout_constraintTop_toBottomOf="@+id/dropdown_menu"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"/>
+    <TextView
+        android:id="@+id/food_you_love"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Food you love"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/chosee_the"
+        app:layout_constraintTop_toBottomOf="@+id/chosee_the"
+        android:layout_marginStart="0dp"
+        />
+    <EditText
+        android:id="@+id/Search_menu"
+        android:textSize="18dp"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toBottomOf="@+id/food_you_love"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/search_bar_background"
+        android:hint="Search"
+        android:paddingStart="20dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/catagory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Catagory"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/food_you_love"
+        app:layout_constraintTop_toBottomOf="@id/Search_menu"
+        android:layout_marginTop="20dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoriesRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toStartOf="@id/catagory"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/catagory"
+        android:layout_marginTop="5dp"
+        tools:listitem="@layout/item_category_food"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/foodRecyclereview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categoriesRecyclerView"
+        tools:listitem="@layout/item_food" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
