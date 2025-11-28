@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
 
-</selector>
+    <!-- Используем тот же красный цвет, что и для кнопок -->
+    <solid android:color="@color/bnt_red_color" />
+
+    <!-- Углы должны быть такими же, как у стандартного фона -->
+    <corners android:radius="30dp" />
+
+</shape>

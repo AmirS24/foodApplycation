@@ -6,12 +6,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="8dp"
     android:elevation="4dp"
-    android:background="@drawable/category_item_background">
+    android:background="@drawable/category_background_selector">
     <ImageView
         android:id="@+id/category_icon"
         android:layout_width="40dp"
         android:layout_height="40dp"
 android:layout_marginTop="16dp"
+        app:tint="@color/category_icon_color_selector"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +24,7 @@ android:layout_marginTop="16dp"
         tools:text="Category"
         android:textAlignment="center"
         android:maxLines="1"
-        android:textColor="#9E9E9E"
+        android:textColor="@color/category_icon_color_selector"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

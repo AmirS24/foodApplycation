@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-  
+    <!-- Если элемент ВЫБРАН, используем красный цвет -->
+    <item android:color="@color/bnt_red_color" android:state_selected="true" />
+    <!-- По умолчанию, используем серый цвет -->
+    <item android:color="#9E9E9E" />
 </selector>
